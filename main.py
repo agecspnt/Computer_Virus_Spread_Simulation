@@ -105,9 +105,8 @@ def analyze_system():
     for path, path_times in times.items():
         plt.hist(path_times, alpha=0.3, bins=30, label=path)
     
-    # 设置纵坐标范围，限制最大值
     y_max = plt.gca().get_ylim()[1]
-    plt.ylim(0, y_max * 0.1)  # 将最大值调整为原来的70%
+    plt.ylim(0, y_max * 0.1)
     
     plt.title("Execution Time Distribution for Each Path")
     plt.xlabel("Execution Time")
